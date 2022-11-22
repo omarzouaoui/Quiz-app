@@ -4,20 +4,22 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 /**import components*/
 import Main from './Main';
+import Quiz from './Quiz';
+import Result from './Result';
 
 /** react router*/
 const router = createBrowserRouter([
   {
     path : "/",
-    element : <div>Root Element</div>
+    element : <Main />
   },
   {
     path : "/quiz",
-    element : <div>Quiz Component</div>
+    element : <Quiz />
   },
   {
     path : "/result",
-    element : <div>Result Component</div>
+    element : <Result />
   },
 ])
 
