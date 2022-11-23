@@ -3,15 +3,6 @@
     color: #cecece;   
     margin-left: 23%;
   }
-  .title{
-    text-align: center;
-    color: #fff;
-    border: 2px solid #00ff37;
-    margin-left: 22%;
-    margin-right: 22%;
-    font-size: 3em;
-  }
-
   .start{
     display: flex;
     justify-content: center;
