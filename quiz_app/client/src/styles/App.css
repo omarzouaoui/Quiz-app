@@ -7,3 +7,12 @@
     margin-right: 22%;
     font-size: 3em;
   }
+  .btn{
+    padding: .2em 1.7em;
+    border: none;
+    border-radius: .1em;
+    font-size: 1.2em;
+    color: #202020;
+    text-decoration: none;
+    background-color: #faff5a;
+}
