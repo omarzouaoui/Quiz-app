@@ -5,7 +5,6 @@ export default function Questions() {
     const [checked, setChecked] = useState(undefined)
 
     function onSelect(){
-        // setChecked(true)
         console.log("radio button change");
     }
 
@@ -17,7 +16,7 @@ export default function Questions() {
             <li>
                 <input
                 type="radio" 
-                value={checked} 
+                value={false} 
                 name="options" 
                 id="q1-option" 
                 onChange={onSelect()}
