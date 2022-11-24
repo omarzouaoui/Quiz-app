@@ -1,6 +1,7 @@
 import React from 'react'
 import "../styles/Result.css";
 import { Link } from 'react-router-dom';
+import ResultTable from './ResultTable';
 
 export default function Result() {
 
@@ -43,6 +44,10 @@ export default function Result() {
         <Link className='btn' to={"/"} onClick={onRestart()}>Restart</Link>
       </div>
 
+      <div className='container'>
+        <ResultTable/>
+      </div>
+    
     </div>
   )
 }
