@@ -1,7 +1,7 @@
 export default[
     {
         id:1,
-        question : "JavaScript is an _______ language",
+        question : "JavaScript is an _______ language ?",
         options : [
             "Object-Oriented",
             "Object-Based",
@@ -10,7 +10,7 @@ export default[
     },
     {
         id:2,
-        question : "Following methods can be used to display data in form using _______",
+        question : "Following methods can be used to display data in form using _______ ?",
         options : [
             "document.write()",
             "console.log()",
@@ -19,7 +19,7 @@ export default[
     },
     {
         id:3,
-        question : "When an operator value is NULL, the typeof returned is _____",
+        question : "When an operator value is NULL, the typeof returned is _______ ?",
         options : [
             "Boolean",
             "Undefined",
@@ -28,7 +28,7 @@ export default[
     },
     {
         id:4,
-        question : "What does the toString() method return?",
+        question : "What does the toString() method return ?",
         options : [
             "Return an Object",
             "Return a String",
@@ -37,7 +37,7 @@ export default[
     },
     {
         id:5,
-        question : "Which function is used to serialize an object into a JSON string",
+        question : "Which function is used to serialize an object into a JSON string ?",
         options : [
             "stringify()",
             "parse()",
