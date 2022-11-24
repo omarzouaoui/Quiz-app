@@ -13,6 +13,7 @@ export default function Result() {
     <div className='container'>
       <h1 className='title text-light'>Quiz Application</h1>
 
+      {/**Result Table */}
       <div className='result flex-center'>
         <div className='flex'>
           <span>userName</span>
@@ -40,10 +41,12 @@ export default function Result() {
         </div>
       </div>
 
+      {/**Restart button to Main.js */}
       <div className='start'>
         <Link className='btn' to={"/"} onClick={onRestart()}>Restart</Link>
       </div>
 
+      {/**Result Table*/}
       <div className='container'>
         <ResultTable/>
       </div>
