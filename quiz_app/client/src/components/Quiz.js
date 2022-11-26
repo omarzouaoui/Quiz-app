@@ -5,7 +5,7 @@ import Questions from './Questions';
 
 /**import Redux store*/
 import {useSelector} from 'react-redux';
-
+  
 export default function Quiz() { 
 
   const state = useSelector(state => state)

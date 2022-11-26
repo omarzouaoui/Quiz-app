@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import data from "../database/data";
 
+/**Custom Hook*/
+import { useFetchQuestion } from '../hooks/FetchQuestions';
+
 export default function Questions() {
 
     const [checked, setChecked] = useState(undefined)
-
+    useFetchQuestion()
     const question = data[2]
 
     useEffect(()=>{
