@@ -7,11 +7,11 @@ import { useFetchQuestion } from '../hooks/FetchQuestions';
 export default function Questions() {
 
     const [checked, setChecked] = useState(undefined)
-    useFetchQuestion()
+    const [{isLoading, apiData, serverError}] = useFetchQuestion()
     const question = data[2]
 
     useEffect(()=>{
-        console.log(question)
+        console.log(isLoading)
     })
 
     function onSelect(){
