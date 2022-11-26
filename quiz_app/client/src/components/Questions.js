@@ -11,9 +11,11 @@ export default function Questions() {
 
     const questions = useSelector(state => state.questions.queue[state.questions.trace]);
     const trace = useSelector(state => state.questions.trace)
+    const state = useSelector(state => state)
+
 
     useEffect(()=>{
-        console.log(questions)
+        console.log(state)
     })
 
     function onSelect(){

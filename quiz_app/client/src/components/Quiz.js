@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import Questions from './Questions';
+
 import { MoveNextQuestion, MovePrevQuestion} from '../hooks/FetchQuestions';
+import { PushAnswer } from '../hooks/setResult';
 
 
 /**import Redux store*/
@@ -24,6 +26,7 @@ export default function Quiz() {
       /**Update the trace value by 1 using move MoveNextAction */
       console.log("next question");
       dispatch(MoveNextQuestion());
+      dispatch(PushAnswer(1))
     }
   };
 
