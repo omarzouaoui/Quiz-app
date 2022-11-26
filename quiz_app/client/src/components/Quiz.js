@@ -1,22 +1,25 @@
 import React, { useEffect } from 'react'
-import "./Questions";
 import Questions from './Questions';
+import { MoveNextQuestion } from '../hooks/FetchQuestions';
 
 
 /**import Redux store*/
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
   
 export default function Quiz() { 
 
-  const state = useSelector(state => state)
+  const state = useSelector(state => state.questions.trace );
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    // console.log(state);
+    console.log(state);
   })
 
   /** next button e handler*/
   function onNext(){
-   
+
+    /**Update the trace value by 1 using move MoveNextAction */
+    dispatch(MoveNextQuestion());
   };
 
   /** prev button e handler*/
