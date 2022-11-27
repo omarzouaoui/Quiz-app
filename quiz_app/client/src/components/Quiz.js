@@ -21,7 +21,7 @@ export default function Quiz() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    console.log(queue);
+    console.log(result);
   })
 
   /** next button e handler*/
@@ -30,7 +30,11 @@ export default function Quiz() {
       /**Update the trace value by 1 using move MoveNextAction */
       console.log("next question");
       dispatch(MoveNextQuestion());
-      dispatch(PushAnswer(check))
+
+      if(result.length <= trace){
+        dispatch(PushAnswer(check));
+      }
+
     }
   };
 
@@ -61,7 +65,7 @@ export default function Quiz() {
       <Questions onChecked={onChecked}/>
 
       <div className='grid'>
-        <button className='btn prev' onClick={onPrev}>Prev</button>
+        { trace > 0 ? <button className='btn prev' onClick={onPrev}>Prev</button> : <div></div> }
         <button className='btn next' onClick={onNext}>Next</button>
       </div>
 
