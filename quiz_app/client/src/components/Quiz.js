@@ -20,9 +20,7 @@ export default function Quiz() {
 
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    console.log(result);
-  })
+  const totalPoints = queue.length * 10;
 
   /** next button e handler*/
   function onNext(){
@@ -36,6 +34,8 @@ export default function Quiz() {
       }
 
     }
+    /**reset the value of the checked variable*/
+    setChecked(undefined)
   };
 
   /** prev button e handler*/
