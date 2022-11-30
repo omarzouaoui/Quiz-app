@@ -4,6 +4,9 @@ import cors from "cors";
 import { config } from "dotenv";
 import router from "./router/route.js";
 
+/**connection file */
+import connect from "./database/conn.js";
+
 
 const app = express();
 
@@ -27,6 +30,19 @@ app.get("/", (req, res) => {
     }
 })
 
-app.listen(port, () => {
-    console.log(`Server Running on http://localhost:${port}`);    
-} )
+/**start sever only if with valid connection */
+connect()
+.then(() => {
+    try{
+        app.listen(port, () => {
+            console.log(`Server Running on http://localhost:${port}`);    
+        })
+    }catch(err){
+        console.log(err);
+    }
+})
+.catch(err => {
+    console.log(err)
+})
+
+
